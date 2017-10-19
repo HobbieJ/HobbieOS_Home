@@ -1,8 +1,4 @@
-# HobbieJ
-## Personal Jekyll Blog
-### https://jacobhobbie.com
-The basic paramaters for my online blog as well as the posts that I will write for it.
+# Jacob Hobbie - Portfolio/Blog
 
-This GitHub is a backup as well as an automated deployment system for the server it's hosted on using Travis.CI.
-
-Stay tuned for updates, as well as fun blog posts!
+**Hosted at https://jacobhobbie.com**
+A portfolio of current work as well as a blog with my random thoughts. Stay tuned for updates!
