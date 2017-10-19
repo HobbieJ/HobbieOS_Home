@@ -3,8 +3,8 @@ rvm:
 - 2.3.5
 
 # Runs build test
-install: gem install jekyll
-script: bundle install
+install: gem install jekyll bundler
+before_script: bundle install
 script: bundle exec jekyll build
 
 sudo: false
