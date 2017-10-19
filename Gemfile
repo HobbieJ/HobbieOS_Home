@@ -2,7 +2,6 @@ source "https://rubygems.org"
 
 # Gems
 gem "jekyll"
-gem "html-proofer"
 
 # Themes
 gem "minima", "~> 2.0"
