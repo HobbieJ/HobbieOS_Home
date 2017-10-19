@@ -5,4 +5,11 @@ rvm:
 before-script:
 - chmod +x ./script/cibuild
 
+# Assume bundler is being used, so 'install' step will run the 'bundle install' by default
+script: ./script/cibuild
 
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+sudo: false
