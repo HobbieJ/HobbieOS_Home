@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Welcome to My Website"
+date: 2017-10-19 01:47:00 -0500
+categories: welcome
+---
+Welcome to my blog website!
+
+I'm really excited to show you not just what I've been working on as a programmer, but also what I've been working on in school, as well as life! I do a variety of things, and I'd love to show them all off to anyone who's interested in it!
+
+I'll keep this short, since this is a soft launch, but welcome again, feel free to subscribe to the RSS feed if you like, especially while I dive headfirst into Ruby and Jekyll, and we'll talk to you soon!
