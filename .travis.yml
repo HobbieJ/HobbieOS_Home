@@ -4,6 +4,6 @@ rvm:
 
 # Runs build test
 install: gem install jekyll
-script: jekyll build ./_site
+script: jekyll build
 
 sudo: false
