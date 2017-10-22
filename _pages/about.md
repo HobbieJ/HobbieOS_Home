@@ -6,6 +6,7 @@ permalink: /about/
 Hi! I'm Jacob Hobbie. I'm a senior at Newman University studying Information Technology and Management of Information Systems.
 
 I also develop software, and run my own IT business to help out the community adjust to the demanding world of technology.
+
 In addition, I love art. I act, sing, dance, write, and speak whenever I can about technology and how it can both help and hurt society as a whole.
 
 I hope you enjoy the blog!
