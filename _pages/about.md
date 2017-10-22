@@ -3,20 +3,23 @@ layout: content
 title: About
 permalink: /about/
 ---
-Hi, I'm Johnny and I live in the Shire. Thanks for visiting my site.
+Hi! I'm Jacob Hobbie. I'm a senior at Newman University studying Information Technology and Management of Information Systems.
 
-I program and write about software development when I have the time. More information can be found through <a href="https://www.linkedin.com/" data-network="LinkedIn" data-proofer-ignore>LinkedIn.</a>
+I also develop software, and run my own IT business to help out the community adjust to the demanding world of technology.
+In addition, I love art. I act, sing, dance, write, and speak whenever I can about technology and how it can both help and hurt society as a whole.
+
+I hope you enjoy the blog!
 
 ----
 
 ## The Website
-This site was made on an [Apple MBP](https://www.apple.com/) powered by [Jekyll](https://jekyllrb.com) on [Github Pages](https://pages.github.com).
-I'd love to hear your feedback on this site and my work.
+This site was made on a [Dell XPS 15](http:www.dell.com/XPS15) powered by [Jekyll](https://jekyllrb.com) hosted on [DigitalOcean](https://digitalocean.com) and managed by yours truly.
+This site also uses a Jekyll theme called [Paper](https://github.com/mkchoi212/paper-jekyll-theme) created by [Mike JS. Choi](https://deadbeef.me/).
 
 ----
 
-## Etcetera
+## On the Internet...
 
-- [Instagram](https://www.instagram.com/) for 📸
-- [Facebook](https://www.facebook.com/) for 🕺
-
+- [GitHub](https://github.com/HobbieJ)
+- [Twitter](https://twitter.com/HobbieJacob)
+- [LinkedIn](https://www.linkedin.com/in/hobbiej/)
