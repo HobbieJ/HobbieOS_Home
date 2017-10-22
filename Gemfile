@@ -1,16 +1,9 @@
 source "https://rubygems.org"
 
-# Gems
-gem "jekyll"
+gem "jekyll", "3.4.3"
+gem "html-proofer"
+gem "rb-fsevent", "0.9.8"
 
-# Themes
-gem "minima", "~> 2.0"
-
-# Plugins
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
+      gem 'jekyll-livereload'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
