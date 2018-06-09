@@ -30,7 +30,7 @@ theme: minima
 plugins:
   - jekyll-feed
 
-# Exclude from processing.
+# Exclude From Processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 # exclude:
