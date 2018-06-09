@@ -1,10 +1,6 @@
 # Jacob Hobbie's Website
 
-This is the source code for my website, hosted at my website, [JacobHobbie.com](https://jacobhobbie.com). Content updates will be distributed in the following manner through branches:
-
-* master - The most up-to-date version of the website, and what runs on the live site.
-* code - Any changes that occur outside of *_posts*, including *_config.yml*, *travis.yml*.
-* write - Any posts that will be published in the official blog. All content will be uploaded within *_posts*.
+This is the source code for my website, hosted at my website, [JacobHobbie.com](https://jacobhobbie.com).
 
 ## Installation/Requirements
 
