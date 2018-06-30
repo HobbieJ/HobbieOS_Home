@@ -2,21 +2,21 @@
 
 This is the source code for my website, hosted at my website, [JacobHobbie.com](https://jacobhobbie.com).
 
-## Installation/Requirements
+## Requirements/Installation
 
-Before I begin, I should mention that this specific version of Jekyll is customized perfectly for my website. Instead of explaining how to install my website, I want to help anyone who is interested in starting their own Jekyll blog by explaining how to get started with a clean instance of Jekyll with their default theme, *Minima*, which you can also find [here](https://github.com/jekyll/minima).
+*Instructions are for the following environment: A Windows 10 machine with the Windows Linux Subsystem (Ubuntu) installed.*
 
-If you want to install the theme I made for my website, *Hobbies*, you can go [here](https://github.com/HobbieJ/Hobbies) to download it, or to find out how to install it from [RubyGems.org](https://rubygems.org). This theme is designed for my website, but feel free to use it for your own Jekyll instance!
+Instead of describing how to install my Jekyll site, the instructions below describe how to install a clean instance of Jekyll with their default theme, *Minima*, which you can also find [here](https://github.com/jekyll/minima).
 
-Finally, if you would like a better tutorial on how to install Jekyll, you can find better documentation from Jekyll themselves in their [documentation](https://jekyllrb.com/docs/home/).
+If you want to install the theme I made for my website, *Hobbies*, you can go [here](https://github.com/HobbieJ/Hobbies) to download it.
+
+The official tutorial on how to create your own Jekyll site can be found in Jekyll's [documentation](https://jekyllrb.com/docs/home/).
 
 ### Requirements
 
-*Installation instructions will be for my development environment: A Windows 10 machine with the Windows Linux Subsystem (Ubuntu) installed.*
+You should know how to use both the Windows Command Prompt, (*cmd*), and *bash*. In addition, you should have installed the Windows Linux Subsystem. To learn how to enable the Windows Linux Subsystem and install Ubuntu on your Windows machine, follow the link [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to Microsoft's documentation, and follow the instructions.
 
-I will assume you already are comfortable with the command line, (Bash) and have installed the Windows Linux Subsystem, with the Ubuntu variant of Linux. To learn how to enable the Windows Linux Subsystem and install Ubuntu on your Windows machine, follow the link [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to Microsoft's documentation, and follow the instructions. You'll have to restart, so make sure you've saved anything important you're working on. Or better yet, work in the cloud whenever you can!
-
-You'll also need to install the following:
+To install Jekyll, you'll need the following:
 * Ruby ([Instructions](https://www.ruby-lang.org/en/documentation/installation/#apt))
 * RubyGems ([Instructions](https://rubygems.org/pages/download))
 * GCC
@@ -24,9 +24,9 @@ You'll also need to install the following:
 
 ### Installation
 
-*These instructions are my own way of talking through Jekyll's official [quickstart guide](https://jekyllrb.com/docs/quickstart/).*
+*These instructions are a summation of Jekyll's official [quickstart guide](https://jekyllrb.com/docs/quickstart/).*
 
-1. Open Bash (Starting off easy)
+1. Open Bash
 2. **(Optional)** I reccomend working in your home directory so you can change things without using *sudo* multiple times. To do that, you can type the following:
 ```
 cd ~
@@ -37,7 +37,7 @@ gem install jekyll bundler
 ```
 4. Create your new website/blog! You'll end up making a brand new folder with the name you choose for your blog. Replace "myblog" in the command with whatever you choose to name your blog, (without quotes):
 ```
-jekyll new myblog
+jekyll new "myblog"
 ```
 5. Your blog is created! You can either edit the files, or *cd* into your new blog. If you do decide to run your new blog first things first, go ahead and *cd* into your blog, and type the following command:
 ```
