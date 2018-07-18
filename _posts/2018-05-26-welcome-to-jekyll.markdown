@@ -1,25 +1,21 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2018-05-26 01:00:19 -0500
-categories: jekyll update
+title:  "Hello World!"
+date:   2018-05-25
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+My name is Jacob Hobbie, and this is the first post on HobbieBlog 2.0!  Welcome!
 
-Jekyll also offers powerful support for code snippets:
+This website has gone through a variety of reboots and restarts since I first launched it 2 years ago. This is the final one. I finally decided to start using Jekyll from scratch, with a theme I built from Jekyll's recommended skeleton shell. Along the way, I chose to make it modular enough where I should be able to continue to modify my own theme, and continue to make this website better and better, without going through a fancy reboot all the time. It was a great lesson, and I want to talk about a few of the things that I learned while launching HobbieBlog 2.0.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+*Now, before I begin, I want to recognize that these are things that I've learned about myself, and may not apply specifically to you. These aren't set rules for everyone to have, they're just things I learned in my learning process that may help you out. So enjoy!*
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+## Bootstrapping is Fast, Learning is Forever
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+I'm still a young developer, trying to figure out things. I've had great experience with certain programming languages, their architectures, and how they work. But not all code follows the same exact logic, and not every project was built by a perfect programmer. Code is made by people, and anything that people make is going to be affected by their knowledge, biases, and other things. That's a very long way of saying that not all code is made equal.
+
+When you're trying to get a project done that has a quick deadline and you can't spend enough time to learn everything about a way a language or piece of software works, it's ok to learn enough, bootstrap it, and move on so you can get other things done. However, if you're given the chance, I really recommend building something that gives you the time to learn whatever you can about a project. Working with Jekyll and Jekyll theming from the ground up taught me a lot about YAML, Ruby, bash, and more. So much so that after building the theme for Jekyll, I now know how to use standard Jekyll far better. Plugins and where to add them make much more sense to me, I can manually add YAML now where I need to after understanding conventions, and Jekyll as a whole seems far more powerful then when I first used the technology. Now does that mean that I'm a Jekyll master? No where close, but it does allow me to get better faster now that I've learned the core technology from the ground-up.
+
+## Modular is Better
+
+When I first started to code, I thought abstracting out code was only a good way to reuse code to save space and processing power. I later learned how powerful it was, and this project only solidified my beliefs. When building a separate theme and website core
