@@ -17,4 +17,4 @@ jobs:
           command: bundle install
       - run: 
           name: Build HobbieBlog
-          command: jekyll build --destination $HOBBIEBLOV_BUILD_DIR
+          command: jekyll build --destination $HOBBIEBLOG_BUILD_DIR
