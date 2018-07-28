@@ -6,7 +6,6 @@ jobs:
     working_directory: ~/HobbieBlog
     environment:
       - HOBBIEBLOG_BUILD_DIR: ~/HobbieBlog/Build
-      - JEKYLL_ENV = production
     steps:
       - checkout
       - run: 
@@ -18,3 +17,9 @@ jobs:
       - run: 
           name: Build HobbieBlog
           command: jekyll build --destination $HOBBIEBLOG_BUILD_DIR
+  deploy:
+    docker:
+      - image: circleci/ruby:latest
+    working_directory: ~/HobbieBlog
+    environment:
+     - HOBBIEBLOG_BUILD_DIR: ~/HobbieBlog/Build
