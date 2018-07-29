@@ -17,9 +17,20 @@ jobs:
       - run: 
           name: Build HobbieBlog
           command: jekyll build --destination $HOBBIEBLOG_BUILD_DIR
+      - persist_to_workspace:
+          root: $HOBBIEBLOG_BUILD_DIR
   deploy:
     docker:
       - image: circleci/ruby:latest
     working_directory: ~/HobbieBlog
     environment:
      - HOBBIEBLOG_BUILD_DIR: ~/HobbieBlog/Build
+    steps:
+      - attach_workspace:
+          at: $HOBBIEBLOG_BUILD_DIR
+      - run:
+          name: Change to Build Directory
+          command: cd $HOBBIEBLOG_BUILD_DIR
+      - run:
+          name: 
+
