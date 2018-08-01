@@ -26,11 +26,14 @@ jobs:
       - image: circleci/ruby:latest
     working_directory: ~/HobbieBlog
     environment:
-     - HOBBIEBLOG_BUILD_DIR: Build
+     - HOBBIEBLOG_BUILD_DIR: ~/HobbieBlog/Build
      - HOBBIEJ_SITE_DIR: /var/www/HobbieJ
     steps:
       - attach_workspace:
           at: .
+      - run:
+          name: Print Public Keys to known_hosts
+          command: printf "$PUB_KEY_ONE\n$PUB_KEY_TWO" > .ssh/known_hosts
       - run:
           name: Change to Build Directory
           command: cd $HOBBIEBLOG_BUILD_DIR
