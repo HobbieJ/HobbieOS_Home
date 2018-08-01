@@ -26,18 +26,15 @@ jobs:
       - image: circleci/ruby:latest
     working_directory: ~/HobbieBlog
     environment:
-     - HOBBIEBLOG_BUILD_DIR: /HobbieBlog/Build
+     - HOBBIEBLOG_BUILD_DIR: /Build
      - HOBBIEJ_SITE_DIR: /var/www/HobbieJ
      - SITE_LOGIN: hobbiej@jacobhobbie.com
     steps:
       - attach_workspace:
           at: .
       - run:
-          name: Testing File Directory
-          command: ls -a
-      - run:
           name: Change to Build Directory
-          command: cd /HobbieBlog/Build
+          command: cd $HOBBIEBLOG_BUILD_DIR
       - run:
           name: Connect over SFTP
           command: sftp $SITE_LOGIN
