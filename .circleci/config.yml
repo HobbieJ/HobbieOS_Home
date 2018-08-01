@@ -27,6 +27,7 @@ jobs:
     working_directory: ~/HobbieBlog
     environment:
      - HOBBIEBLOG_BUILD_DIR: Build
+     - PUBLIC_KEY: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDveatqaFMzMt0/6oPZUhT/1gKMXklMTLxte1ieBjUuGsFfaQob3iuLf6+aRqK5XAZb8kBwjin4RyiAqqveliZS+6io8Wnw9YGajY74aYKyspERRMdT0aQ8NlNo34gpodhL0N4T1NFL+IjIIQjGSEGjNVOGOMEYwJvMi905lt+UiSwkqdlPSFFgoaX02zWsnh9rwmo1fy3v6xlpnh3cf5+0UkWK5E9/YwVXbBxRp7P7U0mFQQvRzqhhWXQ2DlFmqKny39J+9w9JeJZYLIvYH465WeI1TxWvV0XTWw6Us2pmFTBLLh8GzAgguJbTxGk6kEXLfdlLXfT/hJjyYZ8j/XF/ LinkChef@Athena
      - HOBBIEJ_SITE_DIR: /var/www/HobbieJ
      - SITE_LOGIN: hobbiej@jacobhobbie.com
     steps:
@@ -34,7 +35,10 @@ jobs:
           at: .
       - run:
           name: Change to Build Directory
-          command: cd Build
+          command: cd $HOBBIEBLOG_BUILD_DIR
+      - run:
+          name: Copy Public Key
+          command: echo '$PUBLIC_KEY' >> ~/.ssh/known_hosts
       - run:
           name: Connect over SFTP
           command: sftp $SITE_LOGIN
