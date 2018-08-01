@@ -31,7 +31,7 @@ jobs:
      - SITE_LOGIN: hobbiej@jacobhobbie.com
     steps:
       - attach_workspace:
-          at: $HOBBIEBLOG_BUILD_DIR
+          at: .
       - run:
           name: Change to Build Directory
           command: cd $HOBBIEBLOG_BUILD_DIR
