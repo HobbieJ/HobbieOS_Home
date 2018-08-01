@@ -33,12 +33,12 @@ jobs:
     steps:
       - attach_workspace:
           at: .
+      - add_ssh_keys:
+          fingerprints:
+            - "MD5:88:88:4d:e6:91:47:97:f8:f9:dd:25:d8:15:55:60:6a"
       - run:
           name: Change to Build Directory
           command: cd $HOBBIEBLOG_BUILD_DIR
-      - run:
-          name: Copy Public Key
-          command: echo '$PUBLIC_KEY' >> ~/.ssh/known_hosts
       - run:
           name: Connect over SFTP
           command: sftp $SITE_LOGIN
