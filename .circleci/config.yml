@@ -6,7 +6,6 @@ jobs:
     working_directory: ~/HobbieBlog
     environment:
       - HOBBIEBLOG_BUILD_DIR: ~/HobbieBlog/Build
-      - BUILD_FOLDER: Build
     steps:
       - checkout
       - run: 
@@ -21,7 +20,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - $BUILD_FOLDER
+            - Build
   deploy:
     docker:
       - image: circleci/ruby:latest
