@@ -6,7 +6,6 @@ jobs:
     working_directory: ~/HobbieBlog
     environment:
       - HOBBIEBLOG_BUILD_DIR: ~/HobbieBlog/Build
-      - HOBBIEBLOG: HobbieBlog
       - BUILD_FOLDER: Build
     steps:
       - checkout
@@ -20,7 +19,7 @@ jobs:
           name: Build HobbieBlog
           command: jekyll build --destination $HOBBIEBLOG_BUILD_DIR
       - persist_to_workspace:
-          root: $HOBBIEBLOG
+          root: .
           paths:
             - $BUILD_FOLDER
   deploy:
