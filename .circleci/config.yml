@@ -6,7 +6,6 @@ jobs:
     working_directory: ~/HobbieBlog
     environment:
       - HOBBIEBLOG_BUILD_DIR: ~/HobbieBlog/Build
-      - JEKYLL_ENV = production
     steps:
       - checkout
       - run: 
@@ -17,4 +16,46 @@ jobs:
           command: bundle install
       - run: 
           name: Build HobbieBlog
-          command: jekyll build --destination $HOBBIEBLOV_BUILD_DIR
+          command: jekyll build --destination $HOBBIEBLOG_BUILD_DIR
+      - persist_to_workspace:
+          root: .
+          paths:
+            - Build
+  deploy:
+    docker:
+      - image: circleci/ruby:latest
+    working_directory: ~/HobbieBlog
+    environment:
+     - HOBBIEBLOG_BUILD_DIR: ~/HobbieBlog/Build
+     - HOBBIEJ_SITE_DIR: /var/www/HobbieJ
+     - SITE_LOGIN: hobbiej@jacobhobbie.com
+    steps:
+      - attach_workspace:
+          at: $HOBBIEBLOG_BUILD_DIR
+      - run:
+          name: Change to Build Directory
+          command: cd $HOBBIEBLOG_BUILD_DIR
+      - run:
+          name: Connect over SFTP
+          command: sftp $SITE_LOGIN
+      - run:
+          name: Change Directory to Website Folder
+          command: cd $HOBBIEJ_SITE_DIR
+      - run:
+          name: Clean Website Folder
+          command: rm -rf $HOBBIEJ_SITE_DIR/*
+      - run:
+          name: Copy New Website to Website Folder
+          command: put -r $HOBBIEBLOG_BUILD_DIR
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
