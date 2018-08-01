@@ -6,7 +6,8 @@ jobs:
     working_directory: ~/HobbieBlog
     environment:
       - HOBBIEBLOG_BUILD_DIR: ~/HobbieBlog/Build
-      - RELATIVE_BUILD_DIR: /Build
+      - HOBBIEBLOG: HobbieBlog
+      - BUILD_FOLDER: Build
     steps:
       - checkout
       - run: 
@@ -19,13 +20,17 @@ jobs:
           name: Build HobbieBlog
           command: jekyll build --destination $HOBBIEBLOG_BUILD_DIR
       - persist_to_workspace:
-          root: $RELATIVE_BUILD_DIR
+          root: HobbieBlog
+          paths:
+            - Build
   deploy:
     docker:
       - image: circleci/ruby:latest
     working_directory: ~/HobbieBlog
     environment:
      - HOBBIEBLOG_BUILD_DIR: ~/HobbieBlog/Build
+     - HOBBIEJ_SITE_DIR: /var/www/HobbieJ
+     - SITE_LOGIN: hobbiej@jacobhobbie.com
     steps:
       - attach_workspace:
           at: $HOBBIEBLOG_BUILD_DIR
@@ -34,13 +39,13 @@ jobs:
           command: cd $HOBBIEBLOG_BUILD_DIR
       - run:
           name: Connect over SFTP
-          command: sftp hobbiej@jacobhobbie.com
+          command: sftp $SITE_LOGIN
       - run:
           name: Change Directory to Website Folder
-          command: cd /var/www/HobbieJ
+          command: cd $HOBBIEJ_SITE_DIR
       - run:
           name: Clean Website Folder
-          command: rm -rf /var/www/HobbieJ/*
+          command: rm -rf $HOBBIEJ_SITE_DIR/*
       - run:
           name: Copy New Website to Website Folder
           command: put -r $HOBBIEBLOG_BUILD_DIR
