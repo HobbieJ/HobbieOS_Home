@@ -34,10 +34,10 @@ jobs:
           at: .
       - run:
           name: Change to Build Directory
-          command: cd -o "StrictHostKeyChecking no" $HOBBIEBLOG_BUILD_DIR
+          command: cd $HOBBIEBLOG_BUILD_DIR
       - run:
           name: Connect over SFTP
-          command: sftp $SITE_LOGIN
+          command: sftp -o "StrictHostKeyChecking no" $SITE_LOGIN
       - run:
           name: Change Directory to Website Folder
           command: cd $HOBBIEJ_SITE_DIR
