@@ -21,41 +21,40 @@ jobs:
           root: .
           paths:
             - Build
-#  deploy:
-#    docker:
-#      - image: circleci/ruby:latest
-#    working_directory: ~/HobbieBlog
-#    environment:
-#     - HOBBIEBLOG_BUILD_DIR: Build
-#     - HOBBIEJ_SITE_DIR: /var/www/HobbieJ
-#     - SITE_LOGIN: hobbiej@jacobhobbie.com
-#    steps:
-#      - attach_workspace:
-#          at: .
-#      - run:
-#          name: Change to Build Directory
-#          command: cd $HOBBIEBLOG_BUILD_DIR
-#      - run:
-#          name: Connect over SFTP
-#          command: sftp -o "StrictHostKeyChecking no" $SITE_LOGIN
-#      - run:
-#          name: Change Directory to Website Folder
-#          command: cd $HOBBIEJ_SITE_DIR
-#      - run:
-#          name: Clean Website Folder
-#          command: rm -rf $HOBBIEJ_SITE_DIR/*
-#      - run:
-#          name: Copy New Website to Website Folder
-#          command: put -r $HOBBIEBLOG_BUILD_DIR
-#
-#workflows:
-#  version: 2
-#  build-and-deploy:
-#    jobs:
-#      - build
-#      - deploy:
-#          requires:
-#            - build
-#          filters:
-#            branches:
-#              only: master
+  deploy:
+    docker:
+      - image: circleci/ruby:latest
+    working_directory: ~/HobbieBlog
+    environment:
+     - HOBBIEBLOG_BUILD_DIR: Build
+     - HOBBIEJ_SITE_DIR: /var/www/HobbieJ
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Change to Build Directory
+          command: cd $HOBBIEBLOG_BUILD_DIR
+      - run:
+          name: Connect over SSH
+          command: ssh $SSH_USER@$SSH_HOST
+      - run:
+          name: Change Directory to Website Folder
+          command: cd $HOBBIEJ_SITE_DIR
+      - run:
+          name: Clean Website Folder
+          command: rm -rf $HOBBIEJ_SITE_DIR/*
+      - run:
+          name: Copy New Website to Website Folder
+          command: put -r $HOBBIEBLOG_BUILD_DIR
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
