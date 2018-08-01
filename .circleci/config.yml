@@ -32,8 +32,11 @@ jobs:
       - attach_workspace:
           at: .
       - run:
+          name: Change to .ssh Directory
+          command: cd .ssh
+      - run:
           name: Print Public Keys to known_hosts
-          command: printf "$PUB_KEY_ONE\n$PUB_KEY_TWO" > .ssh/known_hosts
+          command: printf "$PUB_KEY_ONE\n$PUB_KEY_TWO" > known_hosts
       - run:
           name: Change to Build Directory
           command: cd $HOBBIEBLOG_BUILD_DIR
