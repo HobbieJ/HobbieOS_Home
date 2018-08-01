@@ -20,7 +20,9 @@ jobs:
           name: Build HobbieBlog
           command: jekyll build --destination $HOBBIEBLOG_BUILD_DIR
       - persist_to_workspace:
-          root: Build
+          root: .
+          paths:
+            - Build
   deploy:
     docker:
       - image: circleci/ruby:latest
