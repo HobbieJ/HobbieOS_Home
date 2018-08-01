@@ -32,5 +32,26 @@ jobs:
           name: Change to Build Directory
           command: cd $HOBBIEBLOG_BUILD_DIR
       - run:
-          name: 
+          name: Connect over SFTP
+          command: sftp hobbiej@jacobhobbie.com
+      - run:
+          name: Change Directory to Website Folder
+          command: cd /var/www/HobbieJ
+      - run:
+          name: Clean Website Folder
+          command: rm -rf /var/www/HobbieJ/*
+      - run:
+          name: Copy New Website to Website Folder
+          command: put -r $HOBBIEBLOG_BUILD_DIR
 
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
