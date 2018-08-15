@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  test:
     docker:
       - image: circleci/ruby:latest
     working_directory: ~/HobbieBlog
@@ -21,46 +21,8 @@ jobs:
           root: .
           paths:
             - Build
-  deploy:
-    docker:
-      - image: circleci/ruby:latest
-    working_directory: ~/HobbieBlog
-    environment:
-     - HOBBIEBLOG_BUILD_DIR: ~/HobbieBlog/Build
-     - HOBBIEJ_SITE_DIR: /var/www/HobbieJ
-    steps:
-      - attach_workspace:
-          at: .
-      - run:
-          name: Change to .ssh Directory
-          command: cd .ssh
-      - run:
-          name: Print Public Keys to known_hosts
-          command: printf "$PUB_KEY_ONE\n$PUB_KEY_TWO" > known_hosts
-      - run:
-          name: Change to Build Directory
-          command: cd $HOBBIEBLOG_BUILD_DIR
-      - run:
-          name: Connect over SSH
-          command: ssh $SSH_USER@$SSH_HOST
-      - run:
-          name: Change Directory to Website Folder
-          command: cd $HOBBIEJ_SITE_DIR
-      - run:
-          name: Clean Website Folder
-          command: rm -rf $HOBBIEJ_SITE_DIR/*
-      - run:
-          name: Copy New Website to Website Folder
-          command: put -r $HOBBIEBLOG_BUILD_DIR
-
 workflows:
   version: 2
-  build-and-deploy:
+  test-site:
     jobs:
-      - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
+      - test
