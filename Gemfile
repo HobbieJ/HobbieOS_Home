@@ -4,7 +4,7 @@ source "https://rubygems.org"
 gem "jekyll", "~> 3.8.2"
 
 # Default Theme
-gem "hobbies", "~> 1.1.5"
+gem "hobbies", "~> 1.1.8"
 
 # Plugins
 group :jekyll_plugins do
