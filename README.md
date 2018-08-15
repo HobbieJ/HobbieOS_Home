@@ -1,5 +1,8 @@
 # Jacob Hobbie's Website
 
+[![CircleCI branch](https://img.shields.io/circleci/project/github/HobbieJ/HobbieBlog/master.svg?longCache=true&style=for-the-badge)](https://circleci.com/gh/HobbieJ/HobbieBlog/tree/master)
+[![GitHub license](https://img.shields.io/github/license/HobbieJ/HobbieBlog.svg?longCache=true&style=for-the-badge)](https://github.com/HobbieJ/HobbieBlog/blob/master/LICENSE.txt)
+
 This is the source code for my website, hosted at my website, [JacobHobbie.com](https://jacobhobbie.com).
 
 ## Requirements/Installation
