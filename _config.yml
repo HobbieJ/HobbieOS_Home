@@ -15,7 +15,7 @@ linkedin_username: hobbiej
 # Build Settings
 markdown: kramdown
 timezone: America/Chicago
-theme: Hobbies
+remote_theme: HobbieJ/Hobbies
 
 # Plugins
 plugins:
