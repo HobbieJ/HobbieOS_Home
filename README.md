@@ -1,5 +1,6 @@
 # Jacob Hobbie's Website
 
+[![Donate](https://img.shields.io/badge/Donate-Square%20Cash-brightgreen.svg?style=for-the-badge)](https://cash.me/$HobbieJ)
 [![CircleCI branch](https://img.shields.io/circleci/project/github/HobbieJ/HobbieBlog/master.svg?longCache=true&style=for-the-badge)](https://circleci.com/gh/HobbieJ/HobbieBlog/tree/master)
 [![GitHub license](https://img.shields.io/github/license/HobbieJ/HobbieBlog.svg?longCache=true&style=for-the-badge)](https://github.com/HobbieJ/HobbieBlog/blob/master/LICENSE.txt)
 
