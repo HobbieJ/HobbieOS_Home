@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Hello World!"
-date:   2018-05-25
+title: "Hello World!"
+date: 2018-05-25
 ---
 
 My name is Jacob Hobbie, and this is the first post on HobbieBlog 2.0!  Welcome!

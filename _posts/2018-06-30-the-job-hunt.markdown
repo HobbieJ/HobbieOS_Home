@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "The Job Hunt"
-date:   2018-06-30
+title: "The Job Hunt"
+date: 2018-06-30
 ---
 
 Hello Internet!
