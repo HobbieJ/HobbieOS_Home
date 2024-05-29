@@ -12,6 +12,11 @@
   "bugs": {
     "url": "https://github.com/HobbieJ/HobbieBlog/issues"
   },
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
@@ -19,9 +24,10 @@
     "vitepress": "^1.2.2",
     "vue": "^3.4.27"
   },
-  "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
-  }
+  "postcss": {
+		"plugins": {
+			"tailwindcss": {},
+			"autoprefixer": {}
+		}
+	}
 }
