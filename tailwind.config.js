@@ -5,7 +5,12 @@ export default {
     './**/*/.md'
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'snazzy-background': '#282a36',
+        'snazzy-foreground': '#eff0eb'
+      }
+    },
   },
   plugins: [],
 }
