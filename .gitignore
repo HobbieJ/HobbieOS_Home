@@ -1,4 +1,6 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+# npm
+node_modules
+
+# VitePress
+.vitepress/dist
+.vitepress/cache
