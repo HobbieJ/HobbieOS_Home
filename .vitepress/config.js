@@ -3,5 +3,10 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "HobbieBlog",
-  description: "Jacob Hobbie's personal blog."
+  description: "Jacob Hobbie's personal blog.",
+  themeConfig: {
+    search: {
+      provider: 'local'
+    }
+  }
 })
