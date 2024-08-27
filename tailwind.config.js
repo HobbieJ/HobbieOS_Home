@@ -6,7 +6,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-      'roboto-mono': ['"Roboto Mono"', 'monospace']
+      'roboto-mono': ['"Roboto Mono"', 'monospace'],
+      'ftg': ['"Fredericka the Great"', 'serif']
     },
     extend: {
       aspectRatio: {

@@ -5,12 +5,13 @@ import { data as posts } from './../posts.data'
 
 <template>
     <main class="flex flex-col flex-initial">
-        <div class="w-full max-w-screen-xl m-auto">
+        <div>
             <!-- TODO: Implement Programmable Icon Changer -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <PostCard v-for="{ title, publishDate, excerpt } of posts"
+                <PostCard v-for="{ title, publishDate, url, excerpt } of posts"
                     :title="title"
                     :publish-date="publishDate"
+                    :url="url"
                     :excerpt="excerpt"
                 />
             </div>

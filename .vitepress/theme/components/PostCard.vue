@@ -1,12 +1,12 @@
 <script setup>
 import TextTitle from './TextTitle.vue';
 
-const props = defineProps(['title', 'publishDate', 'excerpt'])
+const props = defineProps(['title', 'publishDate', 'url', 'excerpt'])
 </script>
 
 <template>
     <article>
-        <a href="#" class="flex flex-col">
+        <a :url="props.url" class="flex flex-col">
             <TextTitle />
             <div class="max-w-prose pr-4">
                 <time :datetime="props.publishDate.object">{{ props.publishDate.string }}</time>
