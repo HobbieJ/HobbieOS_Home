@@ -1,5 +1,5 @@
 {
-  "name": "hobbieblog",
+  "name": "hobbieos_home",
   "description": "Jacob Hobbie's personal website.",
   "version": "3.0.0",
   "author": "Jacob Hobbie <hey@jacobhobbie.com>",
@@ -8,9 +8,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HobbieJ/HobbieBlog.git"
-  },
-  "bugs": {
-    "url": "https://github.com/HobbieJ/HobbieBlog/issues"
   },
   "scripts": {
     "dev": "vitepress dev",
