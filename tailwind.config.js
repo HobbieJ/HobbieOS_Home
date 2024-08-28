@@ -6,8 +6,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-      'roboto-mono': ['"Roboto Mono"', 'monospace'],
-      'ftg': ['"Fredericka the Great"', 'serif']
+      'logo': ['"Kansas Casual"', 'serif'],
+      'mono': ['"Roboto Mono"', 'monospace']
     },
     extend: {
       aspectRatio: {
@@ -20,6 +20,9 @@ export default {
       },
       fontSize: {
         'missing-image': ['29vh', '1em']
+      },
+      width: {
+        'font': '1.25em'
       }
     },
   },
