@@ -22,7 +22,7 @@ export default {
         'missing-image': ['29vh', '1em']
       },
       width: {
-        'font': '1.25em'
+        'font': '1em'
       }
     },
   },

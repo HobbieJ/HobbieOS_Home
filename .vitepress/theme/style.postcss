@@ -13,11 +13,29 @@
 }
 
 @layer components {
-    .icon {
-        @apply w-font;
-        @apply relative;
-        @apply inline;
+    .nav-link {
+        @apply flex;
+        @apply items-center;
+        @apply justify-between;
+        @apply px-2;
+        @apply py-2;
     }
 
-    
+    .nav-link-icon {
+        @apply w-font;
+        @apply mr-1;
+        @apply align-middle;
+    }
+
+    .nav-link-icon-now {
+        padding-top: 2px;
+    }
+
+    .nav-link-icon-about {
+        padding-top: 0.25px;
+    }
+
+    .nav-link-icon-contact {
+        padding-top: 1px;
+    }
 }
