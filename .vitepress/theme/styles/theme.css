@@ -1,0 +1,10 @@
+@theme {
+    --font-logo: 'Kansas Casual', cursive;
+    --font-mono: 'Roboto Mono', monospace;
+
+    --color-snazzy-dark: #282a36;
+    --color-snazzy-light: #eff0eb;
+    --color-snazzy-blue: #57c7ff;
+
+    --text-missing-image: ['29vh', '1em'];
+}
