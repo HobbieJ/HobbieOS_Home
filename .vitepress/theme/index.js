@@ -1,5 +1,5 @@
 import Layout from './Layout.vue'
-import './style.postcss'
+import './style.css'
 
 /** @type {import('vitepress').Theme} */
 export default {

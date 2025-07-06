@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
@@ -28,7 +26,7 @@
     }
 
     .nav-link-icon-now {
-        padding-top: 2px;
+        padding-top: 0px;
     }
 
     .nav-link-icon-about {
